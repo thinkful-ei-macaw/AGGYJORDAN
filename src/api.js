@@ -1,9 +1,9 @@
-export default {
-    getItems
-};
-
 const BASE_URL = 'https://thinkful-list-api.herokuapp.com/agatha';
 
 const getItems = function(){
-    return Promise.resolve('A successful response!');
-}
+  return fetch(`${BASE_URL}/items`);
+};
+
+export default {
+  getItems
+};
